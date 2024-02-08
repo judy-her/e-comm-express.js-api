@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     });
     res.status(200).json(productData);
   } catch (err) {
-    res.status(404).json(err);
+    res.status(400).json(err);
     console.log('Error loading product data');
   }
 });
@@ -32,7 +32,7 @@ router.get('/:id', async (req, res) => {
     }
     res.status(200).json(productData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
     product_name: req.body.product_name,
     price: req.body.price,
     stock: req.body.stock,
-    tagID: [1, 2, 3, 4],
+    tagIds: [1, 2, 3, 4],
   })
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -126,13 +126,9 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    if (!productData) {
-      res.status(404).json({ message: 'No product found with that id!' });
-      return;
-    }
     res.status(200).json(productData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
