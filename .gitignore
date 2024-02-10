@@ -1,4 +1,4 @@
 
-node_modules
+node_modules/
 
-# dont forget .env file
+.env/
