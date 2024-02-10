@@ -26,11 +26,9 @@ To start the app you will need to create and use a MySQL username and password. 
 Using Insomnia, you can test for all routes using GET, POST,PUT, and DELETE
 
 For full access simply click on this link:
+https://github.com/judy-her/e-comm-express.js-api
 For a video demo of this app click this link:
 https://www.loom.com/share/c88d4809605f4a09857c718e975d82d4?sid=546fdc2d-9026-49a8-8f0f-d29d6a00cb3b
-
-Don't forget to add a screenshot by creating assets/images and use the following syntax:
-![alt text](assets/images/screenshot.png)
 
 ## License
 
